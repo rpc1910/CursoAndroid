@@ -42,7 +42,11 @@ public class MainActivity extends AppCompatActivity {
                 // Inicia objeto que irá realizar a troca de tela
                 Intent intent = new Intent(MainActivity.this, Tela2Activity.class);
 
-                intent.putExtra(nome, R.id.labelNome);
+                intent.putExtra("nome", nome);
+                intent.putExtra("idade", idade);
+                intent.putExtra("telefone", telefone);
+
+                startActivity(intent);
             }
         });
     }
